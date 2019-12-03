@@ -25,13 +25,26 @@ function longPlaneteerCalls(words) {
   return false;
 }
 
-function findTheCheese(foods) {
+function findTheCheese(foods) { // [ "grapes", "apples", "gouda", "cheddar"]
 	var cheese = ['camembert', 'cheddar', 'gouda'];
 	for(var i = 0; i < foods.length; i++) {
+	  // i = 4
+	  // foods[i] => "gouda"
 		var cheeseIdx = cheese.indexOf(foods[i]);
 		if(cheeseIdx !== -1) {
 			return foods[i];
 		}
 	}
 	return "no cheese!";
+}
+
+// words =  [ "apples", "truck", "boat", "bananna"] => [ "boat", "bananna"]
+function wordsWithB(words) {
+  var bWords = [];
+  for(var i = 0; i < words.length; i++) {
+    if(words[i].startsWith('b')){
+      bWords.push(words[i])
+    } 
+  }
+  return bWords
 }
